@@ -24,14 +24,407 @@
   <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-@@include('./header.html')
-<div>
-  求职列表
+@@include('./header.html', {
+"jobList" : "active"
+})
+<div class="container r-joblist">
+  <div class="list-search">
+    <div class="input-field col s12">
+      <i class="material-icons prefix large">search</i>
+      <input type="text" id="autocomplete-input" class="autocomplete">
+      <label for="autocomplete-input">Search</label>
+    </div>
+  </div>
+  <div class="list-radio">
+    <ul class="collection">
+      <li class="collection-item">
+        <span class="item-title">职位类型：</span>
+        <ul class="item-ul">
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>客服</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>推广</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>电销</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>Java</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>Android</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>IOS</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>PHP</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>前端</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="typeGroup" type="radio"/>
+              <span>UI设计</span>
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li class="collection-item">
+        <span class="item-title">工作年限：</span>
+        <ul class="item-ul">
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>0-2年</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>2-3年</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>3-5年</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>5-7年</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>7-10年</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="yearGroup" type="radio"/>
+              <span>10年以上</span>
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li class="collection-item">
+        <span class="item-title">求职日期：</span>
+        <ul class="item-ul">
+          <li>
+            <label>
+              <input name="dateGroup" type="radio"/>
+              <span>24小时以内</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="dateGroup" type="radio"/>
+              <span>近三天</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="dateGroup" type="radio"/>
+              <span>近一周</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="dateGroup" type="radio"/>
+              <span>近半月</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="dateGroup" type="radio"/>
+              <span>近一月</span>
+            </label>
+          </li>
+        </ul>
+      </li>
+      <li class="collection-item">
+        <span class="item-title">其他条件:</span>
+        <ul class="item-ul item-select">
+          <li>
+            <select>
+              <option value="" disabled selected>是否已婚</option>
+              <option value="">已婚</option>
+              <option value="">未婚</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" disabled selected>是否国内</option>
+              <option value="">国内</option>
+              <option value="">国外</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" disabled selected>目前状态</option>
+              <option value="">在职</option>
+              <option value="">待业</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" disabled selected>加急求职</option>
+              <option value="">加急</option>
+              <option value="">普通</option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option value="" disabled selected>置顶求职</option>
+              <option value="">置顶</option>
+              <option value="">其他</option>
+            </select>
+          </li>
+        </ul>
+      </li>
+      <li class="collection-item">
+        <span class="item-title">期望薪资:</span>
+        <ul class="item-ul item-select">
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>4-6K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>8-12K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>12-15K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>15-20K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>20-25K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>25-30K</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input name="moneyGroup" type="radio"/>
+              <span>30K+</span>
+            </label>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <div class="list-table">
+    <table class="striped highlight responsive-table">
+      <thead>
+      <tr>
+        <th>求职标题</th>
+        <th>求职职位</th>
+        <th>工作经验</th>
+        <th>目前状态</th>
+        <th>期望薪资</th>
+        <th>求职时间</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">前端老司机</a></td>
+        <td>前端</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-10-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">前端老司机</a></td>
+        <td>前端</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-10-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">前端老司机</a></td>
+        <td>前端</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-10-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">跪求Makati Java开发</a></td>
+        <td>Java</td>
+        <td>三年</td>
+        <td>求职中</td>
+        <td>25K</td>
+        <td>2018-11-20</td>
+      </tr>
+      <tr>
+        <td><a href="./details.html">急求泰国IOS开发</a></td>
+        <td>IOS</td>
+        <td>五年</td>
+        <td>在职</td>
+        <td>35K</td>
+        <td>2018-12-12</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="list-pagination">
+    <ul class="pagination">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+    </ul>
+  </div>
 </div>
+@@include('./footer.html')
 <!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <!--Import  main.js-->
 <script src="/static/js/main.js"></script>
+<script>
+  $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Microsoft": null,
+      "Google": 'https://placehold.it/250x250'
+    },
+  });
+</script>
 </body>
+</html>
 </html>

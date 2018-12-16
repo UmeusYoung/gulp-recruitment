@@ -6,10 +6,11 @@
         <a href="index.html" class="brand-logo"><img src="/static/images/gulp.png" class="logo-img" alt=""></a>
         <!-- Navbar menu -->
         <ul class="right hide-on-med-and-down">
-          <li class="link"><a href="/views/JobList/index.html">求职列表</a></li>
-          <li class="link"><a href="/views/JobAsk/index.html">我要求职</a></li>
-          <li class="link"><a href="/views/JobCustom/index.html">定制招聘</a></li>
-          <li class="link"><a href="/views/JobCenter/index.html">个人中心</a></li>
+          <li @@if (context.index==='active') { class="active" }><a href="/index.html">首页</a></li>
+          <li @@if (context.jobList==='active') { class="active" }><a href="/views/JobList/index.html">求职列表</a></li>
+          <li @@if (context.jobAsk==='active') { class="active" }><a href="/views/JobAsk/index.html">我要求职</a></li>
+          <li @@if (context.jobCustom==='active') { class="active" }><a href="/views/JobCustom/index.html">定制招聘</a></li>
+          <li @@if (context.JobCenter==='active') { class="active" }><a href="/views/JobCenter/index.html">个人中心</a></li>
           <li>
             <a href="#"
                class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login">
