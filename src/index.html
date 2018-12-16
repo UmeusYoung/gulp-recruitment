@@ -1,37 +1,105 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
-    <meta name="full-screen" content="yes">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <title>首页</title>
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!--Import main.css-->
-    <link rel="stylesheet" href="/static/css/main.css">
-  </head>
-  <body>
-
-    <div id="main">
-      @@include('header.html', {
-        "title": "indexPage"
-      })
-      <img src="/static/images/gulp.png" />
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>首页</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!-- Navbar -->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <div class="col s12">
+        <a href="index.html" class="brand-logo"><img src="static/images/gulp.png" class="logo-img" alt=""></a>
+        <!-- Navbar menu -->
+        <ul class="right hide-on-med-and-down">
+          <li class="link"><a href="#">求职列表</a></li>
+          <li class="link"><a href="#">我要求职</a></li>
+          <li class="link"><a href="#">定制招聘</a></li>
+          <li class="link"><a href="#">个人中心</a></li>
+          <li>
+            <a href="#"
+               class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login">
+              Login
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!--Import jQuery before materialize.js-->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!--Import  main.js-->
-    <script src="/static/js/main.js"></script>
-  </body>
+  </nav>
+</div>
+<!-- Navbar menu mobile -->
+<div class="navbar-slidenav">
+  <a href="#" data-target="slide-out" class="sidenav-trigger show-on-medium-and-down"><i class="material-icons">menu</i></a>
+  <ul id="slide-out" class="sidenav">
+    <li>
+      <div class="user-view">
+        <div class="background">
+          <img src="../static/images/others/office.jpg">
+        </div>
+        <a href="#"><img class="circle" src="static/images/others/user_img.jpg"></a>
+        <a href="#"><span class="white-text name">张三</span></a>
+        <a href="#"><span class="white-text email">jdandturk@sina.com</span></a>
+      </div>
+    </li>
+    <li class="first-link"><a href="#"><i class="material-icons">format_align_left</i>求职列表</a></li>
+    <li class="first-link"><a href="#"><i class="material-icons">format_textdirection_l_to_r</i>我要求职</a></li>
+    <li class="first-link"><a href="#"><i class="material-icons">filter_list</i>定制招聘</a></li>
+    <li class="first-link"><a href="#"><i class="material-icons">portrait</i>个人中心</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a class="subheader" href="#!">常见问题</a></li>
+    <li><a class="subheader">联系我们</a></li>
+  </ul>
+</div>
+<!--Carousel-->
+<div class="carousel carousel-slider r-carousel">
+  <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/800/400/food/1"></a>
+  <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/800/400/food/2"></a>
+  <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/800/400/food/3"></a>
+  <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/800/400/food/4"></a>
+</div>
+<!--Announcement-->
+<div class="r-announcement container" id="moocBox">
+  <div class="col s1">
+    <i class="material-icons">volume_up</i>
+  </div>
+  <div class="col s11">
+    <ul class="con1">
+      <li><a class="truncate" href="#">1.学会html5 绝对的屌丝逆袭（案例）</a><span>2013-09-18</span></li>
+      <li><a class="truncate" href="#">2.tab页面切换效果（案例）</a><span>2013-10-09</span></li>
+      <li><a class="truncate" href="#">3.圆角水晶按钮制作（案例）</a><span>2013-10-21</span></li>
+      <li><a class="truncate" href="#">4.HTML+CSS基础课程(系列)</a><span>2013-11-01</span></li>
+      <li><a class="truncate" href="#">5.分页页码制作（案例）</a><span>2013-11-06</span></li>
+      <li><a class="truncate" href="#">6.导航条菜单的制作（案例）</a><span>2013-11-08</span></li>
+      <li><a class="truncate" href="#">7.信息列表制作(案例)</a><span>2013-11-15</span></li>
+      <li><a class="truncate" href="#">8.下拉菜单制作(案例)</a><span>2013-11-22</span></li>
+      <li><a class="truncate" href="#">9.如何实现“新手引导”效果</a><span>2013-12-06</span></li>
+    </ul>
+  </div>
+</div>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
 </html>
