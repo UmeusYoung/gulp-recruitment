@@ -192,7 +192,7 @@
 
 .r-card {
   h6 {
-    a{
+    a {
       float: right;
       color: #26a69a;
       vertical-align: middle;
@@ -209,44 +209,92 @@
   }
 
 }
-.r-card:nth-child(2){
+
+.r-card:nth-child(2) {
   .truncate {
     display: inline-block;
     width: 80%;
   }
 }
+
 .list-search {
   margin-top: 20px;
   padding: 0 1.5rem;
-  border:1px solid #ee6e73;
+  border: 1px solid #ee6e73;
 }
-.list-radio{
-  ul{
+
+.list-radio {
+  ul {
     border-color: #ee6e73;
   }
-  .collection-item{
-    .item-title{
+  .collection-item {
+    .item-title {
       display: table-cell;
-      min-width:70px;
+      min-width: 70px;
     }
     .item-ul {
       display: table-cell;
-      li{
+      li {
         display: inline-block;
       }
-      &.item-select>li{
+      &.item-select > li {
         width: 100px;
       }
     }
   }
 }
-.list-table{
+
+.list-table {
   padding: 1rem;
   border: 1px solid #ee6e73;
   margin: 10px auto 20px;
 }
-.list-pagination{
-  ul{
+
+.list-pagination {
+  ul {
     text-align: right;
+  }
+}
+
+.card-content {
+  .card-title {
+    color: #ee6e73;
+  }
+  .card-item {
+    .input-field {
+      margin-top: 0;
+      @include for-size(phone-only) {
+        margin-top: 1rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.custom-taocan {
+  h6 {
+    margin: 30px auto 20px;
+    color: #ee6e73;
+    font-weight: 700;
+  }
+}
+
+.custom-pay {
+  h6 {
+    margin-bottom: 30px;
+    color: #ee6e73;
+    font-weight: 700;
+  }
+  label {
+    span {
+      img {
+        width: 180px;
+        height: 180px;
+        @include for-size(phone-only) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    }
   }
 }

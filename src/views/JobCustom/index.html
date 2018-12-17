@@ -1,10 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>我要求职</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>定制招聘</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-
+@@include('./header.html', {
+"jobCustom" : "active"
+})
+<div class="container r-custom">
+  <div class="row custom-taocan">
+    <div class="col s12 m12">
+      <h6>选择套餐方式</h6>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="/static/images/others/office.jpg">
+          <span class="card-title">黄金会员</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>1.套餐简币200</p>
+          <p>2.可以定制自己所要的招聘的职位信息（3份）</p>
+          <p>3.享受站内简历定制职位简历上传通知</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="/static/images/others/office.jpg">
+          <span class="card-title">白金会员</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>1.套餐简币200</p>
+          <p>2.可以定制自己所要的招聘的职位信息（3份）</p>
+          <p>3.享受站内简历定制职位简历上传通知</p>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="/static/images/others/office.jpg">
+          <span class="card-title">钻石会员</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>1.套餐简币200</p>
+          <p>2.可以定制自己所要的招聘的职位信息（3份）</p>
+          <p>3.享受站内简历定制职位简历上传通知</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row custom-pay">
+    <div class="col s12 m12">
+      <h6>选择支付方式</h6>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked />
+        <span><img src="/static/images/icons/alipay.png" alt=""></span>
+      </label>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked />
+        <span><img src="/static/images/icons/wechatpay.png" alt=""></span>
+      </label>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked />
+        <span><img src="/static/images/icons/visapay.png" alt=""></span>
+      </label>
+    </div>
+  </div>
+</div>
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
 </body>
+</html>
 </html>

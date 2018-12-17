@@ -1,10 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
   <title>我要求职</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
 </head>
 <body>
-
+@@include('./header.html', {
+"jobAsk" : "active"
+})
+<div class="container r-ask">
+  <div class="ask-card">
+    <div class="row">
+      <div class="col s12 m12">
+        <div class="card">
+          <div class="card-content">
+            <span class="card-title">投递简历</span>
+            <div class="row card-item">
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职职位</option>
+                  <option value="">UI设计</option>
+                  <option value="">产品经理</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>工作年限</option>
+                  <option value="">0-2年</option>
+                  <option value="">2-3年</option>
+                  <option value="">3-5年</option>
+                  <option value="">5-7年</option>
+                  <option value="">7-10年</option>
+                  <option value="">10年以上</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askPay" type="email" class="validate">
+                  <label for="askPay">期望薪资(单位:K)</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askName" type="email" class="validate">
+                  <label for="askName">求职者昵称</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职者性别</option>
+                  <option value="">男</option>
+                  <option value="">女</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askSite" type="email" class="validate">
+                  <label for="askSite">求职者昵称</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否已婚</option>
+                  <option value="">未婚</option>
+                  <option value="">已婚</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否在国内</option>
+                  <option value="">国内</option>
+                  <option value="">国外</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askLocation" type="email" class="validate">
+                  <label for="askLocation">目前所在地</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职状态</option>
+                  <option value="">在职</option>
+                  <option value="">离职</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askTencent" type="email" class="validate">
+                  <label for="askTencent">联系QQ</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="askWechat" type="email" class="validate">
+                  <label for="askWechat">联系微信</label>
+                </div>
+              </div>
+            </div>
+            <span class="card-title">自我评价</span>
+            <div class="row card-item">
+              <div class="row">
+                <form class="col s12">
+                  <div class="row">
+                    <div class="input-field col s12">
+                      <textarea id="textareaEvaluate" class="materialize-textarea" data-length="200"></textarea>
+                      <label for="textareaEvaluate">请输入评价</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <span class="card-title">加分选项</span>
+            <div class="row card-item">
+              <form action="#">
+                <div class="file-field input-field">
+                  <div class="btn">
+                    <span>上传简历</span>
+                    <input type="file" multiple>
+                  </div>
+                  <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="row card-item">
+              <div class="col s12 m12">
+                <div class="input-field inline">
+                  <input id="askBai" type="email" class="validate">
+                  <label for="askBai">作品百度云</label>
+                </div>
+              </div>
+            </div>
+            <span class="card-title">简历状态</span>
+            <div class="row card-item">
+              <ul class="collection">
+                <li class="collection-item">
+                  <ul class="item-ul row">
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历置顶一天（1精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历置顶两天（2精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历置顶三天（3精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历置顶四天（4精币）</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li class="collection-item">
+                  <ul class="item-ul row">
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历加急一天（1精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历加急两天（2精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历加急三天（3精币）</span>
+                      </label>
+                    </li>
+                    <li class="col s12 m6 l3">
+                      <label>
+                        <input name="yearGroup" type="radio"/>
+                        <span>简历加急四天（4精币）</span>
+                      </label>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="col" style="padding: 1rem;">
+                    <span class="red-text">什么是加急置顶：</span>加急简历会在平台加急区展示，并且在平台查询展示时优先展示；置顶简历在平台展示时会优先展示。
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <a class="waves-effect waves-light btn">提交简历</a>
+    </div>
+  </div>
+</div>
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
 </body>
+</html>
 </html>
