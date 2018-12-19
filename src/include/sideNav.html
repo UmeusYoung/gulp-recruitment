@@ -1,0 +1,63 @@
+<ul class="center-nav card hoverable">
+  <li>
+    <dl>
+      <dt>
+        <a href=""><img class="circle" src="/static/images/others/office.jpg" alt=""></a>
+      </dt>
+      <dd><a href="#">我的精币：0</a></dd>
+      <dd><a href="/views/rechange.html">我的简币：0</a></dd>
+    </dl>
+  </li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li>
+    <a href="/views/JobCenter/index.html" @@if (context.centerData==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">account_circle</i> 我的资料
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main1.html" @@if (context.centerResume==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">picture_in_picture_alt</i> 我的简历
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main2.html" @@if (context.centerSubscription==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">perm_phone_msg</i> 我的订阅
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main3.html" @@if (context.centerBuy==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">monetization_on</i> 我的购买
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main4.html" @@if (context.centerChart==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">mail</i> 我的消息
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main5.html" @@if (context.centerSet==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">room_service</i> 我的套餐
+      </span>
+    </a>
+  </li>
+  <li>
+    <a href="/views/JobCenter/main6.html" @@if (context.centerFeedback==='active') { class="active" }>
+      <span class="name">
+        <i class="small material-icons">important_devices</i> 意见反馈
+      </span>
+    </a>
+  </li>
+</ul>

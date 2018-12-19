@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>个人中心-我的简历</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!--公共头部-->
+@@include('./header.html', {
+"jobCenter" : "active"
+})
+<!--主体内容-->
+<div class="container r-center row">
+  <div class="col l3 hide-on-med-and-down">
+    <!--左侧二级导航栏-->
+    @@include('./sideNav.html',{
+    "centerResume" : "active"
+    })
+  </div>
+  <div class="col m12 l9">
+    <!--右侧主要内容-->
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content card-resume">
+            <span class="card-title">个人简历列表</span>
+            <!--移动屏幕下的内容-->
+            <div class="row resume-item blue-grey darken-1 white-text z-depth-2 show-on-small">
+              <div class="col s12">
+                <span class="resume-item-lef">简历名称：</span><span class="resume-item-right">Java 简历</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">求职职位：</span><span class="resume-item-right">Java开发工程师</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">发布时间：</span><span class="resume-item-right">2018-07-05</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">简历标题：</span><span class="resume-item-right">Java求职，高级Java，Java求职，高级Java</span>
+              </div>
+              <div class="col s12">
+                <a href="../JobAsk/index.html" class="waves-effect waves-light btn-small">修改</a>
+                <a href="javascript:" class="waves-effect waves-light btn-small">删除</a>
+                <a href="#cardModal" class="waves-effect waves-light btn-small modal-trigger">详情</a>
+              </div>
+            </div>
+            <div class="row resume-item blue-grey darken-1 white-text z-depth-2 show-on-small">
+              <div class="col s12">
+                <span class="resume-item-lef">简历名称：</span><span class="resume-item-right">前端 简历</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">求职职位：</span><span class="resume-item-right">前端开发工程师</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">发布时间：</span><span class="resume-item-right">2018-12-05</span>
+              </div>
+              <div class="col s12">
+                <span class="resume-item-lef">简历标题：</span><span class="resume-item-right">五年前端，全端技术宅</span>
+              </div>
+              <div class="col s12">
+                <a href="../JobAsk/index.html" class="waves-effect waves-light btn-small">修改</a>
+                <a href="javascript:" class="waves-effect waves-light btn-small">删除</a>
+                <a href="#cardModal" class="waves-effect waves-light btn-small modal-trigger">详情</a>
+              </div>
+            </div>
+            <!--PC屏幕下的内容-->
+            <table class="highlight responsive-table hide-on-small-only">
+              <thead>
+              <tr>
+                <td>简历名称</td>
+                <td>求职职位</td>
+                <td>发布时间</td>
+                <td>简历标题</td>
+                <td>操作</td>
+              </tr>
+              </thead>
+
+              <tbody>
+              <tr>
+                <td>
+                  Java 简历
+                </td>
+                <td>
+                  Java开发工程师
+                </td>
+                <td>
+                  2018-07-05
+                </td>
+                <td class="truncate">
+                  Java求职，高级Java
+                  Java求职，高级Java
+                  Java求职，高级Java
+                  Java求职，高级Java
+                  Java求职，高级Java
+                  Java求职，高级Java
+                </td>
+                <td class="td-option">
+                  <a href="../JobAsk/index.html" class="waves-effect waves-light btn-small">修改</a>
+                  <a href="javascript:" class="waves-effect waves-light btn-small">删除</a>
+                  <a href="#cardModal" class="waves-effect waves-light btn-small modal-trigger">详情</a>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  前端 简历
+                </td>
+                <td>
+                  前端开发工程师
+                </td>
+                <td>
+                  2018-09-11
+                </td>
+                <td class="truncate">
+                  高级前端工程师
+                </td>
+                <td class="td-option">
+                  <a href="../JobAsk/index.html" class="waves-effect waves-light btn-small">修改</a>
+                  <a href="javascript:" class="waves-effect waves-light btn-small">删除</a>
+                  <a href="#cardModal" class="waves-effect waves-light btn-small modal-trigger">详情</a>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+            <!--无内容-->
+            <div class="row resume-404">
+              <div class="col m12 s12">
+                <img src="../../static/images/bg/page-404.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn" href="../JobAsk/index.html">新增简历</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Structure -->
+<div id="cardModal" class="modal">
+  <div class="modal-content">
+    <h4>Java 简历</h4>
+    <p>Mack的简历 Java 5年</p>
+    <p>所需简币：1简币</p>
+    <p>剩余简币：199简币</p>
+  </div>
+  <div class="modal-footer">
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">确认购买</a>
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">充值简币</a>
+    <a href="#" class="modal-close waves-effect waves-green btn-flat">关闭返回</a>
+  </div>
+</div>
+<!--悬浮二级导航-->
+@@include('./fixedNav.html')
+<!--公共底部-->
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>个人中心-我的套餐-套餐详情</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!--公共头部-->
+@@include('./header.html', {
+"jobCenter" : "active"
+})
+<!--主体内容-->
+<div class="container r-center row">
+  <div class="col l3 hide-on-med-and-down">
+    <!--左侧二级导航栏-->
+    @@include('./sideNav.html',{
+    "centerSet" : "active"
+    })
+  </div>
+  <div class="col m12 l9">
+    <!--右侧主要内容-->
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content card-set">
+            <span class="card-title">套餐详情</span>
+            <!--套餐内容-->
+            <div class="row">
+              <ul class="collection with-header">
+                <li class="collection-header"><h4>套餐名称：VIP1套餐</h4></li>
+                <li class="collection-item">1.我是中国人</li>
+                <li class="collection-item">2.先挣他一个亿</li>
+                <li class="collection-item">3.人要讲信用，讲良心，这样才能成功</li>
+                <li class="collection-item">4.物竞天择，适者生存</li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn" href="../JobCustom/index.html">购买套餐</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--悬浮二级导航-->
+@@include('./fixedNav.html')
+<!--公共底部-->
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>

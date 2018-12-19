@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>个人中心-我的订阅-新增订阅</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!--公共头部-->
+@@include('./header.html', {
+"jobCenter" : "active"
+})
+<!--主体内容-->
+<div class="container r-center row">
+  <div class="col l3 hide-on-med-and-down">
+    <!--左侧二级导航栏-->
+    @@include('./sideNav.html',{
+    "centerSubscription" : "active"
+    })
+  </div>
+  <div class="col m12 l9">
+    <!--右侧主要内容-->
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content card-subscription">
+            <!--2.新增订阅-->
+            <span class="card-title">新增订阅</span>
+            <div class="row card-item">
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nickName" type="text" class="validate">
+                  <label for="nickName">职位</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职者性别</option>
+                  <option value="">男</option>
+                  <option value="">女</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否已婚</option>
+                  <option value="">未婚</option>
+                  <option value="">已婚</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否有护照</option>
+                  <option value="">有</option>
+                  <option value="">无</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>工作年限</option>
+                  <option value="">0-2年</option>
+                  <option value="">2-3年</option>
+                  <option value="">3-5年</option>
+                  <option value="">5-7年</option>
+                  <option value="">7-10年</option>
+                  <option value="">10年以上</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>期望薪资</option>
+                  <option value="">5K-10K</option>
+                  <option value="">10K-20K</option>
+                  <option value="">20K-30K</option>
+                  <option value="">30K-50K</option>
+                  <option value="">50K以上</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="didian" type="text" class="validate">
+                  <label for="didian">期望地点</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否在国内</option>
+                  <option value="">国内</option>
+                  <option value="">国外</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="main2-2.html" class="waves-effect waves-light btn">确认新增</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--悬浮二级导航-->
+@@include('./fixedNav.html')
+<!--公共底部-->
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>

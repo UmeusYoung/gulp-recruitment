@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>种植</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+@@include('./header.html', {
+"jobCustom" : "active"
+})
+<div class="container r-custom">
+  <div class="row custom-taocan">
+    <div class="col s12 m12">
+      <h6>充值选择</h6>
+    </div>
+    <div class="col s12 m12 rechange-radio">
+      <ul id="tabs-swipe-demo" class="tabs">
+        <li class="tab col s6"><a href="#test-swipe-1">充值简币</a></li>
+        <li class="tab col s6"><a href="#test-swipe-2">充值精币</a></li>
+      </ul>
+      <div id="test-swipe-1" class="col s12">
+        <div class="row">
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio" checked/>
+              <span>10简币 10元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio" />
+              <span>30简币 25元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio" />
+              <span>50简币 40元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio" />
+              <span>100简币 70元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio" />
+              <span>200简币 150元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio"/>
+              <span>500简币 250元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio"/>
+              <span>700简币 300元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadio" type="radio"/>
+              <span>1000简币 400元</span>
+            </label>
+          </div>
+        </div>
+      </div>
+      <div id="test-swipe-2" class="col s12">
+        <div class="row">
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio" checked/>
+              <span>10简币 10元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>30精币 25元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>50精币 40元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>100精币 70元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>200精币 150元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>500精币 250元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>700精币 300元</span>
+            </label>
+          </div>
+          <div class="col s6 m4 l3">
+            <label>
+              <input name="rechangeRadios" type="radio"/>
+              <span>1000精币 400元</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row custom-pay">
+    <div class="col s12 m12">
+      <h6>支付选择</h6>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked/>
+        <span><img src="/static/images/icons/alipay.png" alt=""></span>
+      </label>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked/>
+        <span><img src="/static/images/icons/wechatpay.png" alt=""></span>
+      </label>
+    </div>
+    <div class="col s6 m4">
+      <label>
+        <input name="groupPay" type="radio" checked/>
+        <span><img src="/static/images/icons/visapay.png" alt=""></span>
+      </label>
+    </div>
+  </div>
+</div>
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>

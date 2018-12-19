@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>个人中心-我的订阅-订阅详情</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!--公共头部-->
+@@include('./header.html', {
+"jobCenter" : "active"
+})
+<!--主体内容-->
+<div class="container r-center row">
+  <div class="col l3 hide-on-med-and-down">
+    <!--左侧二级导航栏-->
+    @@include('./sideNav.html',{
+    "centerSubscription" : "active"
+    })
+  </div>
+  <div class="col m12 l9">
+    <!--右侧主要内容-->
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable">
+          <div class="card-content card-subscription">
+            <!--3.订阅详情-->
+            <span class="card-title">订阅详情</span>
+            <div class="row card-item card-item-data">
+              <div class="col s12 m4">
+                职位：Java开发工程师
+              </div>
+              <div class="col s12 m4">
+                性别：男
+              </div>
+              <div class="col s12 m4">
+                是否已婚：已婚
+              </div>
+              <div class="col s12 m4">
+                是否有护照：有
+              </div>
+              <div class="col s12 m4">
+                工作年限：5年
+              </div>
+              <div class="col s12 m4">
+                期望薪资：50K
+              </div>
+              <div class="col s12 m4">
+                期望地点：日本
+              </div>
+              <div class="col s12 m4">
+                是否在国内：国外
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a href="main2-1.html" class="waves-effect waves-light btn">新增订阅</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--悬浮二级导航-->
+@@include('./fixedNav.html')
+<!--公共底部-->
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>

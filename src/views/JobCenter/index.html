@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta name="full-screen" content="yes">
+  <meta name="x5-fullscreen" content="true">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>个人中心-我的资料</title>
+  <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!--Import main.css-->
+  <link rel="stylesheet" href="/static/css/main.css">
+</head>
+<body>
+<!--公共头部-->
+@@include('./header.html', {
+"jobCenter" : "active"
+})
+<!--主体内容-->
+<div class="container r-center row">
+  <div class="col l3 hide-on-med-and-down">
+    <!--左侧二级导航栏-->
+    @@include('./sideNav.html',{
+    "centerData" : "active"
+    })
+  </div>
+  <div class="col m12 l9">
+    <!--右侧主要内容-->
+    <div class="row">
+      <div class="col s12">
+        <div class="card hoverable">
+          <!--填写信息-->
+          <div class="card-content">
+            <span class="card-title">基本信息</span>
+            <div class="row card-item">
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nickName" type="text" class="validate">
+                  <label for="nickName">昵称</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职者性别</option>
+                  <option value="">男</option>
+                  <option value="">女</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否已婚</option>
+                  <option value="">未婚</option>
+                  <option value="">已婚</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nidkTencent" type="text" class="validate">
+                  <label for="nidkTencent">QQ</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nidkWechat" type="text" class="validate">
+                  <label for="nidkWechat">微信</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nidkPhone" type="text" class="validate">
+                  <label for="nidkPhone">电话</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>是否在国内</option>
+                  <option value="">国内</option>
+                  <option value="">国外</option>
+                </select>
+              </div>
+              <div class="col s12 m4">
+                <div class="input-field inline">
+                  <input id="nidkAddress" type="text" class="validate">
+                  <label for="nidkAddress">目前所在地</label>
+                </div>
+              </div>
+              <div class="col s12 m4">
+                <select>
+                  <option value="" disabled selected>求职状态</option>
+                  <option value="">在职</option>
+                  <option value="">离职</option>
+                </select>
+              </div>
+            </div>
+            <span class="card-title">个人评价</span>
+            <div class="row card-item">
+              <form class="col s12">
+                <div class="row">
+                  <div class="input-field col s12">
+                    <textarea id="areaValuate" class="materialize-textarea" data-length="200"></textarea>
+                    <label for="areaValuate">请输入评价</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn">提交信息</a>
+          </div>
+          <!--展示信息-->
+          <div class="card-content">
+            <span class="card-title">基本信息</span>
+            <div class="row card-item">
+              <div class="col s12 m4">
+               昵称：我是光头
+              </div>
+              <div class="col s12 m4">
+                性别：男
+              </div>
+              <div class="col s12 m4">
+                是否已婚：已婚
+              </div>
+              <div class="col s12 m4">
+                QQ：13246579
+              </div>
+              <div class="col s12 m4">
+                微信：7979643
+              </div>
+              <div class="col s12 m4">
+               电话：1014834186
+              </div>
+              <div class="col s12 m4">
+                是否在国内：国外
+              </div>
+              <div class="col s12 m4">
+                目前所在地：日本
+              </div>
+              <div class="col s12 m4">
+                求职状态：在职
+              </div>
+            </div>
+            <span class="card-title">个人评价</span>
+            <div class="row card-item">
+              <div class="col s12 m12">
+                我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！我是一个好人！
+              </div>
+            </div>
+          </div>
+          <div class="card-action">
+            <a class="waves-effect waves-light btn">修改信息</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--悬浮二级导航-->
+@@include('./fixedNav.html')
+<!--公共底部-->
+@@include('./footer.html')
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<!--Import  main.js-->
+<script src="/static/js/main.js"></script>
+</body>
+</html>
+</html>
