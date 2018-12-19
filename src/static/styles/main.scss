@@ -143,6 +143,12 @@
     .button-collapse {
       display: none;
     }
+    .login-btn {
+      display: none;
+      position: absolute;
+      right: 1rem;
+      top: 14px;
+    }
   }
 }
 
