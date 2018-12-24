@@ -49,6 +49,71 @@ $(document)
         direction: 'top',
         hoverEnabled: false
       });
-    $('#cardModal').modal();
-    $('.tabs').tabs();
+    $('#cardModal')
+      .modal();
+    /*关于我们等切换*/
+    $('.tabs')
+      .tabs();
+    /*选择套餐效果*/
+    $('body')
+      .on('click', '.r-custom .btn-floating', function () {
+        $('.r-custom .btn-floating')
+          .addClass('green');
+        $(this)
+          .removeClass('green')
+          .addClass('red');
+        $('.card')
+          .find('.card-content')
+          .removeClass('red-text');
+        $(this)
+          .closest('.card')
+          .find('.card-content')
+          .addClass('red-text');
+      });
+    /*点击支付*/
+    $('#modalPay')
+      .modal();
+    // 获取验证码
+    var isPhone = 1;
+
+    function getCode(e) {
+      var second = 30;
+      $('#codeBtn')
+        .val(second + '秒后重发');
+      $('#codeBtn')
+        .prop('disabled', true);
+      if (isPhone) {
+        resetCode();
+      }
+    }
+
+    //倒计时
+    function resetCode() {
+      var second = 30;
+      var timer = null;
+      $('#codeBtn')
+        .val(second + '秒后重发');
+      timer = setInterval(function () {
+        second -= 1;
+        $('#codeBtn')
+          .val(second + '秒后重发');
+        if (second < 0) {
+          clearInterval(timer);
+          $('#codeBtn')
+            .val('获取验证码');
+          $('#codeBtn')
+            .prop('disabled', false);
+        } else {
+          $('#codeBtn')
+            .prop('disabled', true);
+          $('#codeBtn')
+            .val(second + '秒后重发');
+        }
+      }, 1000);
+    }
+
+    $('body')
+      .on('click', '#codeBtn', function () {
+        getCode();
+      });
   });

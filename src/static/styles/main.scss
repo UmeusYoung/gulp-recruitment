@@ -34,12 +34,34 @@
   }
 }
 
+.icon-urgent, .icon-top {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: normal;
+  border-radius: 4px;
+  margin: 0 4px;
+  color: yellow;
+  background-color: red;
+}
+
 .login-body {
   width: 100%;
   height: 100%;
   background: url(../images/bg/login_bj.jpg) no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+/* 蓝色主题 */
+nav {
+  background-color: #039be5;
+}
+
+.page-footer {
+  background-color: #039be5;
 }
 
 #login-page {
@@ -143,11 +165,22 @@
     .button-collapse {
       display: none;
     }
+
     .login-btn {
       display: none;
       position: absolute;
       right: 1rem;
       top: 14px;
+    }
+
+    .select-wrapper {
+      width: 90px;
+      margin-top: 10px;
+
+      input.select-dropdown {
+        color: #fff;
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -164,6 +197,17 @@
     text-align: center;
     font-size: 36px;
     z-index: 999;
+  }
+
+  .user-select {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 90px;
+
+    input.select-dropdown {
+      color: #fff;
+    }
   }
 }
 
@@ -328,21 +372,25 @@
     }
   }
 }
-.rechange-radio{
-  &>div{
+
+.rechange-radio {
+  & > div {
     margin-top: 1rem;
   }
-  .row{
-    &>div{
+
+  .row {
+    & > div {
       margin: 1rem 0;
     }
   }
+
   label {
     line-height: 2;
     font-size: 14px;
     color: #26a69a;
   }
 }
+
 .r-center {
   margin-top: 1.5rem;
 
@@ -398,9 +446,6 @@
   }
 
   .select-wrapper {
-    input.select-dropdown {
-    }
-
     margin-bottom: 2rem;
     @include for-size(phone-only) {
       margin-bottom: 1rem;
@@ -415,172 +460,209 @@
           margin-bottom: 8px;
         }
       }
+
       .card-item-data {
         line-height: 2;
       }
-      &.card-subscription{
-        .subscription-404{
+
+      &.card-subscription {
+        .subscription-404 {
           img {
             width: 100%;
             margin-top: 2rem;
           }
         }
-        table{
-          .truncate{
+
+        table {
+          .truncate {
             max-width: 200px;
           }
         }
-        .subscription-item{
+
+        .subscription-item {
           display: none;
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .subscription-item-lef{
+
+          .subscription-item-lef {
             display: table-cell;
             width: 70px;
           }
-          .subscription-item-right{
+
+          .subscription-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
       }
-      &.card-resume{
-        .resume-404{
+
+      &.card-resume {
+        .resume-404 {
           img {
             width: 100%;
             margin-top: 2rem;
           }
         }
-        table{
-          .truncate{
+
+        table {
+          .truncate {
             max-width: 200px;
           }
-          .td-option{
+
+          .td-option {
             min-width: 200px;
           }
         }
-        .resume-item{
+
+        .resume-item {
           display: none;
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .resume-item-lef{
+
+          .resume-item-lef {
             display: table-cell;
             width: 70px;
           }
-          .resume-item-right{
+
+          .resume-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
       }
-      &.card-buy{
-        .buy-404{
+
+      &.card-buy {
+        .buy-404 {
           img {
             width: 100%;
             margin-top: 2rem;
           }
         }
-        table{
-          .truncate{
+
+        table {
+          .truncate {
             max-width: 200px;
           }
         }
-        .buy-item{
+
+        .buy-item {
           display: none;
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .buy-item-lef{
+
+          .buy-item-lef {
             display: table-cell;
             width: 70px;
           }
-          .buy-item-right{
+
+          .buy-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
       }
-      &.card-set{
-        .set-404{
+
+      &.card-set {
+        .set-404 {
           img {
             width: 100%;
             margin-top: 2rem;
           }
         }
-        table{
-          .td-option{
+
+        table {
+          .td-option {
             min-width: 80px;
           }
         }
-        .set-item{
+
+        .set-item {
           display: none;
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .set-item-lef{
+
+          .set-item-lef {
             display: table-cell;
             width: 70px;
           }
-          .set-item-right{
+
+          .set-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
       }
-      &.card-chart{
-        .chart-404{
+
+      &.card-chart {
+        .chart-404 {
           img {
             width: 100%;
             margin-top: 2rem;
           }
         }
-        table{
-          .truncate{
+
+        table {
+          .truncate {
             max-width: 200px;
           }
-          .td-option{
+
+          .td-option {
             min-width: 160px;
           }
         }
-        .chart-item{
+
+        .chart-item {
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .chart-item-lef{
+
+          .chart-item-lef {
             display: table-cell;
             width: 80px;
           }
-          .chart-item-right{
+
+          .chart-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
       }
-      &.card-feedback{
-        .feedback-item{
+
+      &.card-feedback {
+        .feedback-item {
           padding: 1rem 0;
           border-radius: 5px;
           line-height: 1.8;
-          .feedback-item-lef{
+
+          .feedback-item-lef {
             display: table-cell;
             width: 80px;
           }
-          .feedback-item-right{
+
+          .feedback-item-right {
             display: table-cell;
           }
-          .btn-small{
+
+          .btn-small {
             margin: 10px 5px;
           }
         }
@@ -605,5 +687,15 @@
         font-size: 12px;
       }
     }
+  }
+}
+
+.r-about {
+  .about-tabs {
+    margin: 1.4rem 0;
+  }
+
+  .about-content {
+    font-size: 14px;
   }
 }

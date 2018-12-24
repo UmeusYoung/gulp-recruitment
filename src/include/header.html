@@ -6,20 +6,28 @@
         <a href="index.html" class="brand-logo"><img src="/static/images/gulp.png" class="logo-img" alt=""></a>
         <!-- Navbar menu -->
         <ul class="right hide-on-med-and-down">
-          <li @@if (context.index==='active') { class="active" }><a href="/index.html">首页</a></li>
-          <li @@if (context.jobList==='active') { class="active" }><a href="/views/JobList/index.html">求职列表</a></li>
-          <li @@if (context.jobAsk==='active') { class="active" }><a href="/views/JobAsk/index.html">我要求职</a></li>
-          <li @@if (context.jobCustom==='active') { class="active" }><a href="/views/JobCustom/index.html">定制招聘</a></li>
-          <li @@if (context.JobCenter==='active') { class="active" }><a href="/views/JobCenter/index.html">个人中心</a></li>
+          <li @@if (context.index==='active' ) { class="active" }><a href="/index.html">首页</a></li>
+          <li @@if (context.jobList==='active' ) { class="active" }><a href="/views/JobList/index.html">求职列表</a></li>
+          <li @@if (context.jobAsk==='active' ) { class="active" }><a href="/views/JobAsk/index.html">我要求职</a></li>
+          <li @@if (context.jobCustom==='active' ) { class="active" }><a href="/views/JobCustom/index.html">定制招聘</a></li>
+          <li @@if (context.jobCenter==='active' ) { class="active" }><a href="/views/JobCenter/index.html">个人中心</a></li>
+          <li @@if (context.rechange==='active' ) { class="active" }><a href="/views/rechange.html">充值</a></li>
           <li>
-            <a href="/views/login.html"
-               class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login">
+            <select name="" class="navSec">
+              <option value="">菲律宾</option>
+              <option value="">柬埔寨</option>
+              <option value="">泰国</option>
+              <option value="">马来西亚</option>
+              <option value="">其他</option>
+            </select>
+          </li>
+          <li>
+            <a href="/views/login.html" class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login">
               Login
             </a>
           </li>
         </ul>
-        <a href="/views/login.html"
-           class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login login-btn show-on-medium-and-down">
+        <a href="/views/login.html" class="waves-effect waves-light btn yellow darken-2 grey-text text-darken-4 segment-track-login login-btn show-on-medium-and-down">
           Login
         </a>
       </div>
@@ -38,12 +46,24 @@
         <a href="#!user"><img class="circle" src="/static/images/others/user_img.jpg"></a>
         <a href="#!name"><span class="white-text name">张三</span></a>
         <a href="#!email"><span class="white-text email">jdandturk@sina.com</span></a>
+        <div class="user-select">
+          <select name="" id="">
+            <option value="">菲律宾</option>
+            <option value="">柬埔寨</option>
+            <option value="">泰国</option>
+            <option value="">马来西亚</option>
+            <option value="">其他</option>
+          </select>
+        </div>
       </div>
     </li>
     <li class="first-link"><a href="/views/JobList/index.html"><i class="material-icons">format_align_left</i>求职列表</a></li>
     <li class="first-link"><a href="/views/JobAsk/index.html"><i class="material-icons">format_textdirection_l_to_r</i>我要求职</a></li>
     <li class="first-link"><a href="/views/JobCustom/index.html"><i class="material-icons">filter_list</i>定制招聘</a></li>
     <li class="first-link"><a href="/views/JobCenter/index.html"><i class="material-icons">portrait</i>个人中心</a></li>
+    <li>
+      
+    </li>
     <li>
       <div class="divider"></div>
     </li>
